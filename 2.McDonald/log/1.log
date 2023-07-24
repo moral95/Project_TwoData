@@ -1,0 +1,198 @@
+2023-07-23 20:15:26.632927: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+{'training': {'batch_size': 32, 'learning_rate': 0.0001, 'num_epochs': 5, 'weight_decay': 0.01, 'gradient_clipping': True, 'grad_clip': 5.0, 'seed': 5657, 'patience': 5}, 'model': {'dropout_rate': 0.1, 'num_classes': 5}, 'paths': {'annotation_path': '/NasData/home/lsh/10.project/data/mcdonalds/McDonald_s_Reviews.csv', 'model_save_path': './save/MC.pth'}}
+train_dataset : 20037
+val_dataset : 6679
+We use the cuda:2
+100%|█████████████████████████████████████████| 627/627 [15:44<00:00,  1.51s/it]
+len_dataloader : 627
+train_acc : 15.561211758247243
+train_loss : 338.60554426518735
+train_loss_dataset : 10.595681801381067
+100%|█████████████████████████████████████████| 209/209 [01:49<00:00,  1.91it/s]
+valid_acc : 0.029944602485402008
+valid_loss : 338.62472424666845
+valid_loss_dataset : 10.59628198346365
+Train Confusion Matrix:
+ [[   0    0    0    0    0    0]
+ [1448  937  833 1757  729    0]
+ [ 483  194  217  767  178    0]
+ [ 623  121  110 1936   97    0]
+ [ 566   60   48 2757   28    0]
+ [ 921   65   45 5091   26    0]]
+
+            Epoch: 0, 
+            Loss: 338.6055, 
+            Precision: 0.2368, 
+            Recall: 0.1556, 
+            F1 Score: 0.1271, 
+            Accuracy: 0.1556
+            
+Valid Confusion Matrix:
+ [[   0    0    0    0    0    0]
+ [ 458    0 1377    0   20    0]
+ [ 298    0  343    0   11    0]
+ [ 814    0  137    0    6    0]
+ [1116    0   40    0    3    0]
+ [2033    0   20    0    3    0]]
+
+            Epoch: 0, 
+            Loss: 112.8749, 
+            Precision: 0.0296, 
+            Recall: 0.0518, 
+            F1 Score: 0.0269, 
+            Accuracy: 0.0518
+            
+Validation loss decreased (inf --> 70772.567368).  Saving model ...
+100%|█████████████████████████████████████████| 627/627 [15:44<00:00,  1.51s/it]
+len_dataloader : 627
+train_acc : 19.498926985077606
+train_loss : 343.21329251278723
+train_loss_dataset : 10.739867964541476
+100%|█████████████████████████████████████████| 209/209 [01:45<00:00,  1.98it/s]
+valid_acc : 0.11977840994160803
+valid_loss : 346.83390574478074
+valid_loss_dataset : 10.853164590606255
+Train Confusion Matrix:
+ [[   0    0    0    0    0    0]
+ [ 792 3620  173  613  506    0]
+ [ 279 1222   47  167  124    0]
+ [ 538 1998   37  203  111    0]
+ [ 633 2621    7  161   37    0]
+ [1162 4693    5  256   32    0]]
+
+            Epoch: 1, 
+            Loss: 343.2133, 
+            Precision: 0.1176, 
+            Recall: 0.1950, 
+            F1 Score: 0.1245, 
+            Accuracy: 0.1950
+            
+Valid Confusion Matrix:
+ [[1747    0    0  108    0]
+ [ 629    0    0   23    0]
+ [ 940    0    0   17    0]
+ [1156    0    0    3    0]
+ [2054    0    0    2    0]]
+
+            Epoch: 1, 
+            Loss: 115.6113, 
+            Precision: 0.0778, 
+            Recall: 0.2620, 
+            F1 Score: 0.1166, 
+            Accuracy: 0.2620
+            
+EarlyStopping counter: 1 out of 5
+100%|█████████████████████████████████████████| 627/627 [16:04<00:00,  1.54s/it]
+len_dataloader : 627
+train_acc : 20.13774517143285
+train_loss : 344.29277195542625
+train_loss_dataset : 10.773647153568511
+100%|█████████████████████████████████████████| 209/209 [01:51<00:00,  1.88it/s]
+valid_acc : 0.08983380745620602
+valid_loss : 346.131839587928
+valid_loss_dataset : 10.831195459481503
+Train Confusion Matrix:
+ [[   0    0    0    0    0    0]
+ [  52 3559   20 1993   80    0]
+ [  12 1268    0  542   17    0]
+ [   6 2406    2  463   10    0]
+ [   1 3060    1  384   13    0]
+ [   7 5581    1  543   16    0]]
+
+            Epoch: 2, 
+            Loss: 344.2928, 
+            Precision: 0.0973, 
+            Recall: 0.2014, 
+            F1 Score: 0.1147, 
+            Accuracy: 0.2014
+            
+Valid Confusion Matrix:
+ [[1117    0  738    0    0]
+ [ 459    0  193    0    0]
+ [ 787    0  170    0    0]
+ [1022    0  137    0    0]
+ [1818    0  238    0    0]]
+
+            Epoch: 2, 
+            Loss: 115.3773, 
+            Precision: 0.0761, 
+            Recall: 0.1927, 
+            F1 Score: 0.1079, 
+            Accuracy: 0.1927
+            
+EarlyStopping counter: 2 out of 5
+100%|█████████████████████████████████████████| 627/627 [16:12<00:00,  1.55s/it]
+len_dataloader : 627
+train_acc : 19.72351150371812
+train_loss : 345.0127763215815
+train_loss_dataset : 10.796177609104737
+100%|█████████████████████████████████████████| 209/209 [01:50<00:00,  1.89it/s]
+valid_acc : 0.08983380745620602
+valid_loss : 346.3780600807884
+valid_loss_dataset : 10.838900218129176
+Train Confusion Matrix:
+ [[3469    0 2235    0    0]
+ [1274    0  565    0    0]
+ [2404    0  483    0    0]
+ [3028    0  431    0    0]
+ [5425    0  723    0    0]]
+
+            Epoch: 3, 
+            Loss: 345.0128, 
+            Precision: 0.0790, 
+            Recall: 0.1972, 
+            F1 Score: 0.1117, 
+            Accuracy: 0.1972
+            
+Valid Confusion Matrix:
+ [[1180    0  675    0    0]
+ [ 481    0  171    0    0]
+ [ 799    0  158    0    0]
+ [1027    0  132    0    0]
+ [1838    0  218    0    0]]
+
+            Epoch: 3, 
+            Loss: 115.4594, 
+            Precision: 0.0783, 
+            Recall: 0.2003, 
+            F1 Score: 0.1109, 
+            Accuracy: 0.2003
+            
+EarlyStopping counter: 3 out of 5
+100%|█████████████████████████████████████████| 627/627 [16:28<00:00,  1.58s/it]
+len_dataloader : 627
+train_acc : 25.991914957328945
+train_loss : 345.8079557464454
+train_loss_dataset : 10.82106045081705
+100%|█████████████████████████████████████████| 209/209 [01:51<00:00,  1.88it/s]
+valid_acc : 0.13475071118430904
+valid_loss : 347.23051445335864
+valid_loss_dataset : 10.865575313782296
+Train Confusion Matrix:
+ [[5064    4  627    9    0]
+ [1678    0  158    3    0]
+ [2743    0  144    0    0]
+ [3308    0  151    0    0]
+ [5963    1  184    0    0]]
+
+            Epoch: 4, 
+            Loss: 345.8080, 
+            Precision: 0.0933, 
+            Recall: 0.2599, 
+            F1 Score: 0.1279, 
+            Accuracy: 0.2599
+            
+Valid Confusion Matrix:
+ [[1855    0    0    0    0]
+ [ 652    0    0    0    0]
+ [ 957    0    0    0    0]
+ [1159    0    0    0    0]
+ [2056    0    0    0    0]]
+
+            Epoch: 4, 
+            Loss: 115.7435, 
+            Precision: 0.0771, 
+            Recall: 0.2777, 
+            F1 Score: 0.1207, 
+            Accuracy: 0.2777

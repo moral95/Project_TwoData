@@ -1,0 +1,27 @@
+# ./configs/configs.yaml
+training:
+  batch_size: 128
+  learning_rate: 0.0001
+  num_epochs: 10
+  weight_decay: 0.01
+  patience : 5
+  grad_clip: 5.0
+  gradient_clipping: True
+  model : 'resnet50'
+  optim : 'Adam'
+  scheduler : 'StepLR'
+  step : 10
+  gamma : 0.5 # default : 0.1
+  criterion : 'CEL'
+  seed : 5657
+model:
+  dropout_rate: 0.1
+  num_classes: 20
+paths:
+  train_annot: /NasData/home/lsh/10.project/data/butterfly/Training_set.csv
+  test_annot: /NasData/home/lsh/10.project/data/butterfly/Testing_set.csv
+  model_save_path: ./save/butter.pth
+  dataset_path: /NasData/home/lsh/10.project/data/butterfly/
+
+
+

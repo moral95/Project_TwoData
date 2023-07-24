@@ -1,0 +1,16 @@
+# ./configs/configs.yaml
+training:
+  batch_size: 32
+  learning_rate: 0.0001
+  num_epochs: 1
+  weight_decay: 0.01
+  gradient_clipping: True
+  grad_clip: 5.0
+  seed : 5657
+  patience: 5
+model:
+  dropout_rate: 0.1
+  num_classes: 5
+paths:
+  annotation_path: /NasData/home/lsh/10.project/data/mcdonalds/McDonald_s_Reviews.csv
+  model_save_path: ./save/MC.pth
