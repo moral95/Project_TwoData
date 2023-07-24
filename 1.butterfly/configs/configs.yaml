@@ -16,7 +16,7 @@ training:
   seed : 5657
 model:
   dropout_rate: 0.1
-  num_classes: 20
+  num_classes: 75
 paths:
   train_annot: /NasData/home/lsh/10.project/data/butterfly/Training_set.csv
   test_annot: /NasData/home/lsh/10.project/data/butterfly/Testing_set.csv
